@@ -1,0 +1,188 @@
+// Desktop 
+.pricingTable {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  
+  // Recommended plan badge
+  div:nth-of-type(2) > span:nth-of-type(1) {
+    background: var(--secondary-500);
+    color: var(--secondary-800);
+    box-shadow: 2px 4px 6px 0px rgb(196 146 60 / 30%);
+    
+    font-size: 0.85rem;
+    font-weight: 600;
+    
+    margin: 0 auto;
+    max-width: 10rem;
+
+    padding: 0.3rem;
+    border-radius: 99rem;
+  }
+
+  // Recommended border and negative margin plan
+  div:nth-of-type(2) {
+    border: 2px solid var(--primary-500);
+    margin-top: -2rem;
+  }
+
+  // First and last margin title
+  div:first-child, div:last-child {
+    h2 {
+      margin-top: 3rem;
+    }
+  }
+
+  .pricingItem {
+    background: var(--neutral-100);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 3rem 2rem 3rem 2rem;
+
+    h2 {
+      margin-top: 1.8rem;
+    }
+
+    h2, p, span {
+      text-align: center;
+    }
+
+    span {
+      display: block;
+    }
+
+    
+    // Price symbols
+    span:nth-of-type(2),
+    span:nth-of-type(3)  {
+      color: var(--neutral-800);
+
+      &::before {
+        content: '£';
+      }
+  
+      &::after {
+        content: '/m';
+      }  
+    }
+    // Main price
+    span:nth-of-type(2) {
+      font-size: 3.6rem;
+
+      &::before {
+        font-size: 2.4rem;
+      }
+  
+      &::after {
+        font-size: 2.4rem;
+      }  
+    }
+    // Sale price
+    span:nth-of-type(3) {
+      font-size: 1rem;
+      text-decoration: line-through;
+    }
+
+    // Everything on plan + info...
+    span:nth-of-type(4) {
+      color: var(--primary-500);
+      text-align: left;
+      font-weight: 700;
+      padding-left: 2rem;
+      padding-bottom: 1rem;
+    }
+
+    button {
+      margin: 2rem auto;
+    }
+
+    ul {
+      li {
+        text-decoration: underline dotted;
+        list-style-type: none;
+
+        display: block;
+        position: relative;
+
+        &:hover span {
+          color:var(--neutral-100);
+          opacity: 1;
+          visibility: visible;
+          z-index: 9999;
+        }
+
+        span {
+          background-color: var(--neutral-900);
+          border-radius: 6px;
+          color: #fff;
+          font-size: 0.9rem;
+          font-weight: 400;
+          line-height: 1.6em;
+          padding: 18px 18px;
+          text-align: center;
+          visibility: hidden;
+          width: 240px;
+          z-index: 9998;
+          /* Position the tooltip text */
+          position: absolute;
+          z-index: 9998;
+          left: 50%;
+          bottom: 100%;
+          margin-left: -120px;
+          /* Use half of the width (120/2 = 60), to center the tooltip */
+          /* Fade in tooltip */
+          opacity: 0;
+          -webkit-transition: opacity 0.3s;
+          transition: opacity 0.3s;
+        }
+
+        span::after {
+            border-color: black transparent transparent transparent;
+            border-style: solid;
+            border-width: 5px;
+            content: " ";
+            left: 50%;
+            margin-left: -5px;
+            position: absolute;
+            top: 100%;
+            /* At the bottom of the tooltip */
+        }
+         
+
+        &::before {
+          background-image: url('/images/done icon for our profissional website service features.svg');
+          background-repeat: no-repeat;
+          content: '';
+          display: inline-block;
+          height: 32px;
+          width: 32px;
+          vertical-align: middle;
+        }
+        
+        
+        
+        
+      }
+    }
+  }
+  
+}
+
+// Mobile
+@media (max-width: 720px) {
+  .pricingTable {
+    grid-template-columns: auto;
+    max-width: 90%;
+    margin: 0 auto;
+
+    // Recommended border and negative margin plan
+    div:nth-of-type(2) {
+    margin-top: 0rem;
+  }
+
+  }
+}

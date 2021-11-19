@@ -1,0 +1,28 @@
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+
+.title, .pricingContent {
+  padding: 5rem 0;
+
+  h1, p, span {
+    text-align: center;
+    display: block;
+  }
+
+  p {
+    padding: 1.8rem 0 1rem 0;
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}
+

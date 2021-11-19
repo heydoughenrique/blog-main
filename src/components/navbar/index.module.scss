@@ -1,0 +1,34 @@
+.container {
+  width: 100%;
+  height: 5rem;
+  border-bottom: .0625rem solid var(--neutral-100);
+  box-shadow: 0 0.025rem 0.15rem rgb(0 0 0 / 8%);
+
+}
+
+.content {
+  max-width: 1120px;
+  height: 5rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  display: flex;
+  align-items: center;
+
+  .leftSection {
+    display: flex;
+  }
+  
+  .middleSection {
+    display: flex;
+    flex: 2;
+    height: 100%;
+    justify-content: center;
+  }
+  
+  .rightSection {
+    display: flex;
+  }
+
+}
+

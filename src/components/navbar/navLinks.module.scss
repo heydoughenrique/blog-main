@@ -1,0 +1,46 @@
+.navLinksContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+    list-style: none;
+
+    li {
+      height: 100%;
+      padding: 0 1.1em;
+      color: var(--neutral-700);
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: 0.045rem;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      border-top: 2px solid transparent;
+      transition: all 20ms ease-in-out;
+    
+      &:hover {
+        border-top: 2px solid var(--primary-500);
+        font-weight: 600;
+        letter-spacing: 0.03rem;
+
+        a { 
+          color: var(--primary-500);
+          text-shadow: 0px 0px 1px (--primary-500);
+        }
+
+      }
+
+      
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-size: inherit;
+      }
+    }
+  }
+}

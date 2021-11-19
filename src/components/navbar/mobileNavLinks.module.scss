@@ -1,0 +1,49 @@
+.navLinksContainer {
+  height: 100% ;
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+  
+
+  ul {
+    margin: 0;
+    padding: 3rem 0 0 0;
+    display: flex;
+    height: 100%;
+    list-style: none;
+    background-color: #fff;
+    width: 100%;
+    flex-direction: column;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    background: #fff;
+
+    li {
+      width: 90%;
+      margin: 0 auto;
+      padding: 0.4rem 1.1em;
+      color: var(--neutral-700);
+      font-weight: 400;
+      font-size: 1.2rem;
+      display: flex;
+      font-feature-settings: 'kern';
+    
+      margin-bottom: 10px;
+    
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-size: inherit;
+      }
+
+    }
+
+    .marginer {
+      height: 1rem;
+      background: none;
+    }
+  }
+}
+
+  
