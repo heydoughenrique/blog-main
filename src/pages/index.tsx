@@ -123,7 +123,6 @@ export default function Home({ product }: HomeProps) {
               />
             </div>
           </div>
-
         </section> */}
       </main>
 
